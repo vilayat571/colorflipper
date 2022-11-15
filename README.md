@@ -1,7 +1,6 @@
-# A little bit Vanilla JS project 
-# Getting Started with Create React App
+# The little Vanilla JS project to practise
 
-#Live demo - https://vilayatsafarovcolorflipper.netlify.app/hexcolor.html
+# Live demo - https://vilayatsafarovcolorflipper.netlify.app/hexcolor.html
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
