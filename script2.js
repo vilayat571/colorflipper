@@ -35,18 +35,18 @@ sty.display = "flex";
 sty.justifyContent = 'center';
 sty.alignItems = 'center'
 
-var arrays = ['red','blue','yellow','green','orange','purple','grey','violet'];
-var rnd = Math.round((Math.random() * 10));
-var rColor = rnd > arrays.length ? arrays[0] : arrays[rnd];
 btn.addEventListener('click',() => {
-    var hexNum = rColor !== undefined ? rColor : Math.random().toPrecision(6).slice(2,8);
-    localStorage.setItem('color',hexNum);
+
+    var arrays = ['red','blue','yellow','green','orange','purple','grey','violet'];
+    var rnd = Math.round((Math.random() * 10));
+    var rColor = rnd > arrays.length ? arrays[0] : arrays[rnd];
+    var mixColor = rColor !== undefined ? rColor : (Math.random().toPrecision(6)).slice(2,8);
+    localStorage.setItem('color',mixColor);
     var color = localStorage.getItem('color');
-    sty.background = `#${color}`;
-    console.log(parseInt(color))
-    title.textContent = `Background Color : #${color}`
+    sty.background = ` ${isNaN(parseInt(color)) ? color : `#${color}`}`;
+    title.textContent = `Background Color : ${isNaN(parseInt(color)) ? color : `#${color}`}`;
 });
+
 
 title.textContent = `Background Color : #${localStorage.getItem('color')}`
 sty.background = `#${localStorage.getItem('color')}`;
-
